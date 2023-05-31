@@ -1,0 +1,3 @@
+[console_scripts]
+mwjApiTest = mwjApiTest.manage:run
+

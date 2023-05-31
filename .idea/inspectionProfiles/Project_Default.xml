@@ -1,0 +1,124 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="CssRedundantUnit" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyArgumentEqualDefaultInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyAugmentAssignmentInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyBehaveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyClassicStyleClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.8" />
+            <item index="1" class="java.lang.String" itemvalue="3.9" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyMandatoryEncodingInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyMissingOrEmptyDocstringInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyMissingTypeHintsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="76">
+            <item index="0" class="java.lang.String" itemvalue="pywin32" />
+            <item index="1" class="java.lang.String" itemvalue="pyqt5-tools" />
+            <item index="2" class="java.lang.String" itemvalue="numpy" />
+            <item index="3" class="java.lang.String" itemvalue="Pillow" />
+            <item index="4" class="java.lang.String" itemvalue="altgraph" />
+            <item index="5" class="java.lang.String" itemvalue="decorator" />
+            <item index="6" class="java.lang.String" itemvalue="PyInstaller" />
+            <item index="7" class="java.lang.String" itemvalue="python-dotenv" />
+            <item index="8" class="java.lang.String" itemvalue="py" />
+            <item index="9" class="java.lang.String" itemvalue="Click" />
+            <item index="10" class="java.lang.String" itemvalue="PyQt5-sip" />
+            <item index="11" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="12" class="java.lang.String" itemvalue="requests" />
+            <item index="13" class="java.lang.String" itemvalue="hrpc" />
+            <item index="14" class="java.lang.String" itemvalue="mss" />
+            <item index="15" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="16" class="java.lang.String" itemvalue="websocket-client" />
+            <item index="17" class="java.lang.String" itemvalue="func-timeout" />
+            <item index="18" class="java.lang.String" itemvalue="pocoui" />
+            <item index="19" class="java.lang.String" itemvalue="PyQt5" />
+            <item index="20" class="java.lang.String" itemvalue="certifi" />
+            <item index="21" class="java.lang.String" itemvalue="pywin32-ctypes" />
+            <item index="22" class="java.lang.String" itemvalue="comtypes" />
+            <item index="23" class="java.lang.String" itemvalue="urllib3" />
+            <item index="24" class="java.lang.String" itemvalue="retry" />
+            <item index="25" class="java.lang.String" itemvalue="opencv-contrib-python" />
+            <item index="26" class="java.lang.String" itemvalue="six" />
+            <item index="27" class="java.lang.String" itemvalue="facebook-wda" />
+            <item index="28" class="java.lang.String" itemvalue="pefile" />
+            <item index="29" class="java.lang.String" itemvalue="pywinauto" />
+            <item index="30" class="java.lang.String" itemvalue="chardet" />
+            <item index="31" class="java.lang.String" itemvalue="configparser" />
+            <item index="32" class="java.lang.String" itemvalue="future" />
+            <item index="33" class="java.lang.String" itemvalue="airtest" />
+            <item index="34" class="java.lang.String" itemvalue="pypiwin32" />
+            <item index="35" class="java.lang.String" itemvalue="idna" />
+            <item index="36" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="37" class="java.lang.String" itemvalue="supervisor" />
+            <item index="38" class="java.lang.String" itemvalue="gcd" />
+            <item index="39" class="java.lang.String" itemvalue="pytz" />
+            <item index="40" class="java.lang.String" itemvalue="coreapi" />
+            <item index="41" class="java.lang.String" itemvalue="pymysql" />
+            <item index="42" class="java.lang.String" itemvalue="drf-extensions" />
+            <item index="43" class="java.lang.String" itemvalue="pillow" />
+            <item index="44" class="java.lang.String" itemvalue="django-rest-swagger" />
+            <item index="45" class="java.lang.String" itemvalue="gevent" />
+            <item index="46" class="java.lang.String" itemvalue="django-prometheus" />
+            <item index="47" class="java.lang.String" itemvalue="filelock" />
+            <item index="48" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="49" class="java.lang.String" itemvalue="loguru" />
+            <item index="50" class="java.lang.String" itemvalue="poco" />
+            <item index="51" class="java.lang.String" itemvalue="extend" />
+            <item index="52" class="java.lang.String" itemvalue="wda" />
+            <item index="53" class="java.lang.String" itemvalue="HTMLTestRunner" />
+            <item index="54" class="java.lang.String" itemvalue="protobuf" />
+            <item index="55" class="java.lang.String" itemvalue="tornado" />
+            <item index="56" class="java.lang.String" itemvalue="Werkzeug" />
+            <item index="57" class="java.lang.String" itemvalue="pytest" />
+            <item index="58" class="java.lang.String" itemvalue="iniconfig" />
+            <item index="59" class="java.lang.String" itemvalue="cffi" />
+            <item index="60" class="java.lang.String" itemvalue="mitmproxy" />
+            <item index="61" class="java.lang.String" itemvalue="asgiref" />
+            <item index="62" class="java.lang.String" itemvalue="cryptography" />
+            <item index="63" class="java.lang.String" itemvalue="allure-pytest" />
+            <item index="64" class="java.lang.String" itemvalue="toml" />
+            <item index="65" class="java.lang.String" itemvalue="httptools" />
+            <item index="66" class="java.lang.String" itemvalue="attrs" />
+            <item index="67" class="java.lang.String" itemvalue="Faker" />
+            <item index="68" class="java.lang.String" itemvalue="pyOpenSSL" />
+            <item index="69" class="java.lang.String" itemvalue="colorama" />
+            <item index="70" class="java.lang.String" itemvalue="ruamel.yaml.clib" />
+            <item index="71" class="java.lang.String" itemvalue="allure-python-commons" />
+            <item index="72" class="java.lang.String" itemvalue="DingtalkChatbot" />
+            <item index="73" class="java.lang.String" itemvalue="pyparsing" />
+            <item index="74" class="java.lang.String" itemvalue="msgpack" />
+            <item index="75" class="java.lang.String" itemvalue="ruamel.base" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="xiaozai_APITestPlatfor.urls.register" />
+          <option value="execjs" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>

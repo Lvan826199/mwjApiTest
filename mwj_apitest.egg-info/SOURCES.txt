@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mwjApiTest/__init__.py
+mwjApiTest/manage.py
+mwjApiTest/core/__init__.py
+mwjApiTest/utils/__init__.py
+mwj_apitest.egg-info/PKG-INFO
+mwj_apitest.egg-info/SOURCES.txt
+mwj_apitest.egg-info/dependency_links.txt
+mwj_apitest.egg-info/entry_points.txt
+mwj_apitest.egg-info/top_level.txt
