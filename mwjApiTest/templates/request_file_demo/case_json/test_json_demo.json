@@ -1,0 +1,36 @@
+[
+  {
+    "host": "http://httpbin.org",
+    "headers": {
+      "UserAgent": "python/mwjapitest"
+    },
+    "method": "post",
+    "interface": "/post",
+    "setup_hook": "setup_hook_demo",
+    "teardown_hook": "teardown_hook_demo",
+    "extract": {
+    },
+    "Cases": [
+      {
+        "title": "json文件-用例1",
+        "json": {
+          "mobile_phone": "18312341234",
+          "pwd": "xiaozai"
+        },
+        "verification": [
+          ["eq", 200, "status_code"]
+        ]
+      },
+      {
+        "title": "json文件-用例2",
+        "json": {
+          "mobile_phone": "18812341234",
+          "pwd": "mwj"
+        },
+        "verification": [
+          ["eq", 200, "status_code"]
+        ]
+      }
+    ]
+  }
+]

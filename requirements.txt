@@ -34,3 +34,6 @@ urllib3==2.0.2
 webencodings==0.5.1
 yarg==0.1.9
 zipp==3.15.0
+DingtalkChatbot==1.5.7
+Jinja2==3.1.2
+PyYAML==6.0
