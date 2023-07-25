@@ -1,3 +1,5 @@
 include README.md
 include LICENSE
-include mwjApiTest/templates/*
+include mwjApiTest/templates/reports/*
+include mwjApiTest/templates/request_file_demo/case_json/*
+include mwjApiTest/templates/request_file_demo/case_yaml/*
