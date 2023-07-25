@@ -10,11 +10,17 @@ __author__ = "梦无矶小仔"
 import os
 import logging
 from logging.handlers import TimedRotatingFileHandler, BaseRotatingHandler
+import colorama
+import colorlog
+
+# 初始化 colorama 库
+colorama.init()
 
 
 class Logger:
     __instance = None
-    sh = logging.StreamHandler()
+    # 往屏幕上输出
+    screen_output = logging.StreamHandler()
 
     def __new__(cls, path=None, level='DEBUG', RotatingFileHandler: BaseRotatingHandler = None):
         '''
@@ -25,8 +31,10 @@ class Logger:
         '''
 
         if not cls.__instance:
+            colorama.init()
             cls.__instance = super().__new__(cls)
             log = logging.getLogger("mwjApiTest")
+            # 设置日志级别
             log.setLevel(level)
             cls.__instance.log = log
 
@@ -36,13 +44,14 @@ class Logger:
             if RotatingFileHandler and isinstance(RotatingFileHandler, BaseRotatingHandler):
                 fh = RotatingFileHandler
             else:
+                # # 往文件里写入#指定间隔时间自动生成文件的处理器
                 fh = TimedRotatingFileHandler(os.path.join(path, 'mwjApiTest.log'), when='D', interval=1,
                                               backupCount=7, encoding='utf-8')
 
             fh.setLevel(level)
             cls.__instance.log.addHandler(fh)
             # 定义handler的输出格式
-            formatter = logging.Formatter("%(asctime)s | 【%(levelname)s】 | : %(message)s")
+            formatter = logging.Formatter("%(levelname)-8s%(asctime)s%(name)s:%(filename)s:%(lineno)d %(message)s")
             fh.setFormatter(formatter)
         return cls.__instance
 
@@ -50,59 +59,52 @@ class Logger:
         """设置日志输出的等级"""
         self.log.setLevel(level)
 
-    def set_file_handle(self, level, path):
-        if path:
-            if not os.path.isdir(path):
-                os.mkdir(path)
-            fh = TimedRotatingFileHandler(os.path.join(path, 'mwjApiTest.log'), when='D',
-                                          interval=1, backupCount=7,
-                                          encoding="utf-8")
-            fh.setLevel(level)
-            self.log.addHandler(fh)
-            # 定义handler的输出格式
-            formatter = logging.Formatter("%(asctime)s | 【%(levelname)s】 | : %(message)s")
-            fh.setFormatter(formatter)
-
     #### 设置输出的颜色
-    def fontColor(self, color):
+    def fontColor(self):
         # 不同的日志输出不同的颜色
-        formatter = logging.Formatter(color.format("%(asctime)s| ", "【%(levelname)s】", " | : %(message)s"))
-        self.sh.setFormatter(formatter)
-        self.log.addHandler(self.sh)
+        formatter = colorlog.ColoredFormatter(
+            '%(log_color)s[%(asctime)s] [%(name)s] [%(levelname)s]: %(message)s',
+            log_colors={
+                'DEBUG': 'cyan',
+                'INFO': 'green',
+                'WARNING': 'yellow',
+                'ERROR': 'red',
+                'CRITICAL': 'red,bg_white',
+            },
+        )
+        self.screen_output.setFormatter(formatter)
+        self.log.addHandler(self.screen_output)
 
     def debug(self, message):
-        self.fontColor('\033[0;34m{}\033[0;34m{}\033[0;34m{}')
+        self.fontColor()
         self.log.debug(message)
 
     def info(self, message):
-        self.fontColor('\033[0;32m{}\033[0;32m{}\033[0;32m{}')
+        self.fontColor()
         self.log.info(message)
 
     def warning(self, message):
-        self.fontColor('\033[0;33m{}\033[0;43m{}\033[0;33m{}')
+        self.fontColor()
         self.log.warning(message)
 
     def error(self, message):
-        self.fontColor('\033[0;31m{}\033[0;41m{}\033[0;31m{}')
+        self.fontColor()
         self.log.error(message)
 
-    def exception(self, message):
-        self.fontColor('\033[0;31m{}\033[0;41m{}\033[0;31m{}')
-        self.log.exception(message)
-
     def critical(self, message):
-        self.fontColor('\033[0;35m{}\033[0;45m{}\033[0;35m{}')
+        self.fontColor()
         self.log.critical(message)
 
 
-# 设置控制台输出颜色
-def print_info(msg):
-    print('\033[0;32m{}'.format(msg))
+# 设置控制台输出颜色,兼容跨平台输出
+def print_info(msg: str):
+    print(colorama.Fore.GREEN + str(msg) + colorama.Style.RESET_ALL)
 
 
-def print_waring(msg):
-    print('\033[0;33m{}'.format(msg))
+def print_waring(msg: str):
+    print(colorama.Fore.YELLOW + str(msg) + colorama.Style.RESET_ALL)
 
 
 def print_error(msg):
-    print('\033[0;31m{}'.format(msg))
+    print(colorama.Fore.RED + str(msg) + colorama.Style.RESET_ALL)
+
